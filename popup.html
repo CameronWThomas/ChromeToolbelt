@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Hello world </title>
+  <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="popup.css">
+
+
+</head>
+
+<body>
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="nav-item"><a tabindex="-1" class="nav-link active show" data-toggle="tab" href="#unit-converter-tab">U/C</a></li>
+    <li class="nav-item"><a tabindex="-1" class="nav-link" data-toggle="tab" href="#hex-rgb-tab">RGB</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="unit-converter-tab" class="tab-pane fade in active show">
+
+      <div class="uc-container">
+        <table class="uc-table">
+          <tbody>
+            <tr>
+              <td>
+                <div class="uc-input-area">
+                  <input type="number" class="form-control" placeholder="Enter value" id="uc-user-input" />
+                  <select class="form-control" id="uc-user-select">
+                    <!-- METRIC LENGTHS -->
+                    <option value="cm">cm</option>
+                    <option value="cm">centimeters</option>
+                    <option value="m">m</option>
+                    <option value="m">meters</option>
+                    <option value="km">km</option>
+                    <option value="km">kilometers</option>
+                    <!-- IMPERIAL LENGTHS -->
+                    <option value="in">inch</option>
+                    <option value="in">in</option>
+                    <option value="ft">feet</option>
+                    <option value="ft">ft</option>
+                    <option value="yd">yards</option>
+                    <option value="yd">yd</option>
+                    <option value="mi">mile</option>
+                    <option value="mi">mi</option>
+                    <!-- IMPERIAL WEIGHTS -->
+                    <!-- <option value="lb">lb</option> -->
+                    <!-- METRIC WEIGHTS -->
+                    <!--  <option value="stone">stone</option> -->
+                  </select>
+                  <button class="btn btn-light" id="uc-calculate-button">Calculate</button>
+                </div>
+              </td>
+              <td>
+                <div id="uc-response-area">
+                  Please select a size and type
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+    <div id="hex-rgb-tab" class="tab-pane fade">
+      <div class="hex-rgb-container">
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <div class="hex-to-rgb-container">
+                  <input type="text" class="form-control" placeholder="Enter Hex Value" id="hex-number" />
+                  <input type="text" class="form-control" placeholder="Waiting for value..." id="hex-number-result" />
+                </div>
+                <div class="hex-to-rgb-button-container">
+                  <button class="btn btn-light" id="hex-to-rgb-button">Hex to RGB</button>
+                </div>
+              </td>
+              <td>
+                <div class="rgb-to-hex-container">
+                  <div class="rgb-input-container">
+                    <input type="number" min="0" max="255" class="form-control rgb-input" placeholder="R" id="rgb-r" />
+                    <input type="number" min="0" max="255" class="form-control rgb-input" placeholder="G" id="rgb-g" />
+                    <input type="number" min="0" max="255" class="form-control rgb-input" placeholder="B" id="rgb-b" />
+                  </div>
+                  <input type="text" class="form-control" placeholder="Waiting for value..." id="rgb-number-result" />
+                </div>
+                <div class="rgb-to-hex-button-container">
+                  <button class="btn btn-light" id="rgb-to-hex-button">RGB to Hex</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<!-- <script type="text/javascript" src="bootstrap/bootstrap.min.js"></script> -->
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="popup.js"></script>
+
+</html>
